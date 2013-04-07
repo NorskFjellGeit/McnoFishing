@@ -1,0 +1,48 @@
+name: McnoFishing
+version: 0.2
+description: Dette er en Fiske plugin for Minecraft Norway.
+author: NorskFjellGeit
+website: http://www.minecraftnorway.com/
+main: no.mcno.fishing.McnoFishing
+database: false
+
+commands:
+  fishing:
+    description: Fiske Konkurranse.
+    permission: mcnof.fishing
+    usage: Feil! Bare skriv /fisking.
+  fisk:
+    description: Fiske Konkurranse.
+    permission: mcnof.fisk
+    aliases: [fish]
+    usage: Feil! Bare skriv /fisk.
+  setfishpos:
+    description: Sette fiskeposisjonen.
+    permission: mcnof.setfishpos
+    aliases: [setfishingpos]
+    usage: Feil! Bare skriv /setfishpos.
+  testing:
+    description: Sette fiskeposisjonen.
+    permission: mcnof.testing
+    usage: Feil! Bare skriv /setfishpos.
+    
+permissions:
+  mcnof.*:
+    description: Gir tilgang til alle kommandoer
+    default: op
+    children:
+        mcno.fisk: true
+        mcno.fishing: true
+        mcno.setfishpos: true
+  mcnof.fisk:
+    description: Hjelpesiden.
+    default: true
+  mcnof.fishing:
+    description: Tomt systemet.
+    default: op
+  mcnof.setfishpos:
+    description: Midlertidig ban.
+    default: op
+  mcnof.testing:
+    description: Midlertidig ban.
+    default: op
